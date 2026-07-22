@@ -1,0 +1,21 @@
+name = "avaye-yaghin"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# محیط تولید
+[vars]
+AI_API_KEY = "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"
+BACKEND_URL = "https://api.avaye-yaghin.com"
+
+# محیط توسعه
+[env.dev]
+vars = { AI_API_KEY = "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", BACKEND_URL = "http://localhost:5000" }
+
+# روت‌ها
+routes = [
+  { pattern = "api.avaye-yaghin.com/*", zone_id = "your_zone_id" }
+]
+
+# Observability
+[observability]
+logs = { enabled = true, retention_days = 7 }
